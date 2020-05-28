@@ -254,5 +254,5 @@ Autoencoding beyond pixels using a learned similarity metric
 
 Wasserstein Generative Adversarial Networks
 
-## Not Paper
+## Others
 
