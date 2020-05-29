@@ -4,9 +4,17 @@
 
 ## Basic
 
-Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift
+**Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift**
 
-DECOUPLED WEIGHT DECAY REGULARIZATION
+- ICML 2015 Google
+- internal covariate shift
+  - DNN中因为每层neural的变化，数据分布会不断变化。类比蝴蝶效应。模型深层每次输入的数据分布可能方差非常大。大大增加了训练收敛的难度。
+- batch norm
+  - 在每一层，计算mini batch mean & mini batch var。然后进行norm变换。
+  - 引入两个可学习参数gamma, beta。 对norm变换以后的x进行一次线性变换(当然也就拥有了可以变回原样的能力)。
+  - 优势：范化性好，收敛快，一定程度可以取代dropout
+
+**DECOUPLED WEIGHT DECAY REGULARIZATION**
 
 Fixing Weight Decay Regularization in Adam
 
