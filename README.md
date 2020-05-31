@@ -6,7 +6,7 @@
 
 **Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift**
 
-- ICML 2015 Google
+-  ICML 2015 Google
 - internal covariate shift
   - DNN中因为每层neural的变化，数据分布会不断变化。类比蝴蝶效应。模型深层每次输入的数据分布可能方差非常大。大大增加了训练收敛的难度。
 - batch norm
@@ -15,6 +15,11 @@
   - 优势：范化性好，收敛快，一定程度可以取代dropout
 
 **DECOUPLED WEIGHT DECAY REGULARIZATION**
+
+-  ICLR (Poster) 2019 
+- weight decay 是L2 norm的等价形式（仅限SGD，即学习率全局不变，因为等价的公式中，学习率是耦合在里面的）
+- 在adaptive gradient方法中，将weight decay 和 L2 norm decouple，可以获得更好的范化能力
+- 虽然adam本身自带学习率衰减，论文还是指出解耦weight decay后（adamW），仍可以获得15%的指标提升
 
 Fixing Weight Decay Regularization in Adam
 
