@@ -39,9 +39,12 @@
   - 已知sigmoid会降低学习效率（ none-zero mean that induces important singular values in the Hessian）、饱和后带来梯度消失等问题
   - 文章对比了softmax, tanh, softsign在5层NN中不同层的数值变化，论证了sigmoid一开始基本都是在做无用功，前三层一开始都在随机输出，最后一层直接陷入饱和状态，在迭代100次以后才逃出来真正开始训练。其中softsign表现最好
 - 对于初始化方法
-  - 近似推导了一个[初始化方法](https://blog.csdn.net/u011534057/article/details/51673458)，能够尽量保证在NN传递时，W的均值为0，方差稳定。也就是目前很多机器学习工具包集成的 Xavier initialization
+  - 近似推导了一个[初始化方法](https://blog.csdn.net/u011534057/article/details/51673458)，能够尽量保证在NN传递时，W的均值为0，方差不变。方法简单但是效果异常得好。也就是目前很多机器学习工具包集成的 Xavier initialization
 
-Variational Inference: A Review for Statisticians
+#### Variational Inference: A Review for Statisticians
+
+- CoRR 2016
+- 
 
 XGBoost: A Scalable Tree Boosting System
 
