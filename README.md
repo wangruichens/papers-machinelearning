@@ -44,7 +44,7 @@
 #### Variational Inference: A Review for Statisticians
 
 - CoRR 2016
-- 
+- 总结性文章，一些基础知识点：Markov chain, Monte Carlo sampling, Gibbs sampling,  Kullback-Leibler divergence, mean-field theory, ELBO, CAVI
 
 XGBoost: A Scalable Tree Boosting System
 
