@@ -6,6 +6,8 @@
 
 **Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift**
 
+***
+
 -  ICML 2015 Google
 - internal covariate shift
   - DNN中因为每层neural的变化，数据分布会不断变化。类比蝴蝶效应。模型深层每次输入的数据分布可能方差非常大。大大增加了训练收敛的难度。
@@ -16,18 +18,36 @@
 
 **DECOUPLED WEIGHT DECAY REGULARIZATION**
 
+***
+
 -  ICLR (Poster) 2019 
 - weight decay 是L2 norm的等价形式（仅限SGD，即学习率全局不变，因为等价的公式中，学习率是耦合在里面的）
 - 在adaptive gradient方法中，将weight decay 和 L2 norm decouple，可以获得更好的范化能力
 - 虽然adam本身自带学习率衰减，论文还是指出解耦weight decay后（adamW），仍可以获得15%的指标提升
 
-Fixing Weight Decay Regularization in Adam
 
-An overview of gradient descent optimization algorithms
 
-UNDERSTANDING DEEP LEARNING REQUIRES RE-THINKING GENERALIZATION
+**An overview of gradient descent optimization algorithms**
 
-Understanding the difficulty of training deep feedforward neural networks
+***
+
+- CoRR 2016
+- Gradient descent总结性文章，主要包括BGD, SGD, Mini-batch GD, Momentum, Nesterov Accelerated Gradient, Adagrad, Adadelta, RMSprop, Adam, AdaMax, Nadam
+- 提供了一些SGD优化推荐，如Shuffle/Curriculum, BN, Early stopping, Gradient Gaussion Noise 
+
+**Understanding deep learning requires rethinking generalization**
+
+***
+
+- ICLR 2017 Best Paper Google
+- 不觉得这篇凭什么拿best paper，都是一些很表象的东西，可能是有大佬背书吧
+- 深度网络能很容易的拟合随机数据
+- 正则化对模型泛化能力不起决定作用 ？？没看懂怎么得出来的，百分位的提升都不叫提升？
+
+**Understanding the difficulty of training deep feedforward neural networks**
+
+- AISTATS 2010 大名鼎鼎的Xavier Glorot初始化
+- 
 
 Variational Inference: A Review for Statisticians
 
@@ -47,7 +67,7 @@ Fast Approximate Nearest Neighbor Search With The Navigating Spreading-out Graph
 
 LINE: Large-scale Information Network Embedding
 
-node2vec: Scalable Feature Learning for Networks
+node2vec: Scalable Feature Learning for Networks 
 
 Structural Deep Network Embedding
 
