@@ -54,6 +54,9 @@ ON THE CONVERGENCE OF ADAM AND BEYOND
 
 The Marginal Value of Adaptive Gradient Methods in Machine Learning
 
+Understanding the Disharmony between Dropout and Batch Normalization by
+Variance Shift
+
 ## Recsys
 
 DeepWalk: Online Learning of Social Representations
