@@ -34,7 +34,7 @@
 
 #### Understanding the difficulty of training deep feedforward neural networks
 
-- AISTATS 2010 大名鼎鼎的Xavier Glorot初始化
+- AISTATS 2010 大名鼎鼎的**Xavier Glorot**初始化
 - 对于激活函数
   - 已知sigmoid会降低学习效率（ none-zero mean that induces important singular values in the Hessian）、饱和后带来梯度消失等问题
   - 文章对比了softmax, tanh, softsign在5层NN中不同层的数值变化，论证了sigmoid一开始基本都是在做无用功，前三层一开始都在随机输出，最后一层直接陷入饱和状态，在迭代100次以后才逃出来真正开始训练。其中softsign表现最好
@@ -54,8 +54,12 @@ ON THE CONVERGENCE OF ADAM AND BEYOND
 
 The Marginal Value of Adaptive Gradient Methods in Machine Learning
 
-Understanding the Disharmony between Dropout and Batch Normalization by
-Variance Shift
+#### Understanding the Disharmony between Dropout and Batch Normalization by Variance Shift
+
+- CVPR 2019
+- Dropout在train与test阶段的不同会引入variance shift，进而导致之后的BN层在train阶段学习的数据分布与test阶段不同，最终导致效果下降
+- variance shift 主要取决于dropout和feature dimension. 在feature dim特别大，dropout较小的时候，variance shift也几乎可以忽略。这也是WRN(Wide ResNet)使用dropout的解释
+- 可以在最后一层BN之后加Dropout
 
 ## Recsys
 
