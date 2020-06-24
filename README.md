@@ -9,8 +9,14 @@
   - DNN中因为每层neural的变化，数据分布会不断变化。类比蝴蝶效应。模型深层每次输入的数据分布可能方差非常大。大大增加了训练收敛的难度。
 - batch norm
   - 在每一层，计算mini batch mean & mini batch var。然后进行norm变换。
-  - 引入两个可学习参数gamma, beta。 对norm变换以后的x进行一次线性变换(当然也就拥有了可以变回原样的能力)。
+    - 注意bn是纵向的，效果很大程度上取决于mini batch的大小与不同batch间的var差距。
+  - 引入两个可学习参数gamma, beta。 对norm变换以后的x进行一次线性变换 gamma*x + beta (当然也就拥有了可以变回原样的能力，也就让模型能够不因为BN而损失拟合能力)。
   - 优势：范化性好，收敛快，一定程度可以取代dropout
+
+#### Layer Normalization
+
+- CoRR 2016
+- 与BN的区别就是是横向的，计算的是输入特征所有dimension累加的mu,sigma。这些值都是与batch无关的。所以不需要像BN那样去关心mini batch间的差异。适用于动态场景、在线学习、小mini batch，尤其在RNN中，比如Bert
 
 #### DECOUPLED WEIGHT DECAY REGULARIZATION
 
