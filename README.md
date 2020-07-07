@@ -17,6 +17,7 @@
 
 - CoRR 2016
 - 与BN的区别就是是横向的，计算的是输入特征所有dimension累加的mu,sigma。这些值都是与batch无关的。所以不需要像BN那样去关心mini batch间的差异。适用于动态场景、在线学习、小mini batch，尤其在RNN中，比如Bert
+- 因为是同example间所有feature统计值，如果feature间差距比较大，等于限制了feature的特性，从而约束了模型表达能力
 
 #### DECOUPLED WEIGHT DECAY REGULARIZATION
 
@@ -69,6 +70,10 @@ The Marginal Value of Adaptive Gradient Methods in Machine Learning
 
 ## Recsys
 
+#### Position-Normalized Click Prediction in Search Advertising
+
+- COEC
+
 DeepWalk: Online Learning of Social Representations
 
 Fast Approximate Nearest Neighbor Search With The Navigating Spreading-out Graph
@@ -81,7 +86,7 @@ Structural Deep Network Embedding
 
 Learning Deep Structured Semantic Models for Web Search using Clickthrough Data
 
-Modeling Task Relationships in Multi-task Learning with Multi-gate Mixture-of-Experts
+#### Modeling Task Relationships in Multi-task Learning with Multi-gate Mixture-of-Experts
 
 Learning Tree-based Deep Model for Recommender Systems
 
@@ -117,7 +122,12 @@ Deep Session Interest Network for Click-Through Rate Prediction
 
 DeepFM: A Factorization-Machine based Neural Network for CTR Prediction
 
-Entire Space Multi-Task Model: An Effective Approach for Estimating Post-Click Conversion Rate
+#### Entire Space Multi-Task Model: An Effective Approach for Estimating Post-Click Conversion Rate
+
+- SIGIR 2018
+- 提出了两个客观存在的问题，Sample Selection Bias和Data Sparsity。模型通过引入CTR和CTCVR两个任务来预估CVR
+- p(conv|click,impression) = p(conv,impression,click) / p(click|impression)
+- 对pCVR的预估，可以利用训练pCTR模型来指导embedding的训练，进而更准确的估计oCPC = pCVR*CPA
 
 Factorization Machines
 
